@@ -8,10 +8,10 @@ interface LayoutProps {
 
 const Layout = (props: LayoutProps) => {
   return (
-    <div>
+    <>
       <Header />
       {props.children && <Container>{props.children}</Container>}
-    </div>
+    </>
   );
 };
 

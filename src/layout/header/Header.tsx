@@ -4,12 +4,12 @@ import { SearchForm } from "@/features/search/containers/search-form";
 
 const Header = () => {
   return (
-    <div className="header">
-      <div className="header__container container">
+    <header className="header">
+      <section className="header__container container">
         <Logo />
         <SearchForm />
-      </div>
-    </div>
+      </section>
+    </header>
   );
 };
 
