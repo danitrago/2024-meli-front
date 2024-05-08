@@ -11,5 +11,6 @@ $component-name: header;
     &__container {
         display: flex;
         gap: 2rem;
+        align-items: center;
     }
 }
