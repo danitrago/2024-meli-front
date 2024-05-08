@@ -1,0 +1,18 @@
+$component-name: 'breadCrumb';
+
+.#{$component-name} {
+    display: flex;
+    font-weight: bold;
+    font-size: .8rem;
+    padding: 1rem 0;
+    color: rgb(115, 115, 115);
+
+    &__link {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &__separator {
+        margin: 0 .5rem;
+    }
+}

@@ -4,7 +4,6 @@ $component-name: header;
 
 .#{$component-name} {
     background-color: variables.$primary;
-    margin-bottom: 1rem;
     padding-top: .7rem;
     padding-bottom: .7rem;
     position: sticky;
