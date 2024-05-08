@@ -1,0 +1,8 @@
+@use "../../styles/settings/variables.scss";
+
+$component-name: header;
+
+.#{$component-name} {
+    background-color: variables.$primary;
+    margin-bottom: 1rem;
+}

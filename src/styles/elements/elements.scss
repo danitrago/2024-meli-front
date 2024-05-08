@@ -1,0 +1,9 @@
+@use '../settings/variables.scss';
+
+body {
+    font-family: variables.$font-family;
+}
+
+p {
+    color: green;
+}

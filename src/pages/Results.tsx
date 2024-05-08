@@ -21,7 +21,7 @@ const Results = () => {
 
   return (
     <Layout>
-      Results for: {searchTerm}
+      <p>Results for: {searchTerm}</p>
       {products.map((product: any) => (
         <li key={product.id}>
           <Link to={`/items/${product.id}`}>{product.title}</Link>
