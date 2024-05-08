@@ -3,8 +3,16 @@ import imgTwo from "@/assets/electro.webp";
 import imgThree from "@/assets/envios.webp";
 import { Slider } from "@/components/slider";
 import { Layout } from "@/layout";
+import { useEffect } from "react";
 
 const Search = () => {
+  useEffect(() => {
+    const searchBox = document.getElementsByName(
+      "search"
+    )[0] as HTMLInputElement;
+    searchBox.focus();
+  }, []);
+
   return (
     <Layout>
       <Slider>
