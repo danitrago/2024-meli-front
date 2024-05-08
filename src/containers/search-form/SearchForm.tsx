@@ -1,9 +1,9 @@
+import { Button } from "@/components/button";
+import { Input } from "@/components/input";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { FormFields } from "../../types/formFields.type";
 import "./searchForm.styles.scss";
-import { Input } from "@/components/input";
-import { Button } from "@/components/button";
+import { FormFields } from "./searchForm.types";
 
 const SearchForm = () => {
   const navigate = useNavigate();

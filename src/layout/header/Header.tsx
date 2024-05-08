@@ -1,6 +1,6 @@
 import Logo from "@/components/Logo";
 import "./header.styles.scss";
-import { SearchForm } from "@/features/search/containers/search-form";
+import { SearchForm } from "@/containers/search-form";
 
 const Header = () => {
   return (

@@ -1,3 +1,4 @@
 export type FormFields = {
-  search: string;
-};
+    search: string;
+  };
+  
