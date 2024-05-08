@@ -5,4 +5,11 @@ $component-name: header;
 .#{$component-name} {
     background-color: variables.$primary;
     margin-bottom: 1rem;
+    padding-top: .7rem;
+    padding-bottom: .7rem;
+
+    &__container {
+        display: flex;
+        gap: 2rem;
+    }
 }

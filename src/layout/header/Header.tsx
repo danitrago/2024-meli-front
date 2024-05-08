@@ -5,7 +5,7 @@ import "./header.styles.scss";
 const Header = () => {
   return (
     <div className="header">
-      <div className="container">
+      <div className="header__container container">
         <Logo />
         <SearchInput />
       </div>
