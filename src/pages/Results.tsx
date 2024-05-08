@@ -1,5 +1,6 @@
 import { BreadCrumb } from "@/components/breadcrumb";
 import { Layout } from "@/layout";
+import Container from "@/layout/Container";
 import { getSearchResults } from "@/services/search.services";
 import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
@@ -24,15 +25,15 @@ const Results = () => {
 
   return (
     <Layout>
-      <div className="container">
+      <Container>
         <BreadCrumb items={categories} />
-      </div>
-      <p>Results for: {searchTerm}</p>
-      {products.map((product: any) => (
-        <li key={product.id}>
-          <Link to={`/items/${product.id}`}>{product.title}</Link>
-        </li>
-      ))}
+        <p>Results for: {searchTerm}</p>
+        {products.map((product: any) => (
+          <li key={product.id}>
+            <Link to={`/items/${product.id}`}>{product.title}</Link>
+          </li>
+        ))}
+      </Container>
     </Layout>
   );
 };

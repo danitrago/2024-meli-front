@@ -1,4 +1,5 @@
 import { Layout } from "@/layout";
+import Container from "@/layout/Container";
 import { getProductDetails } from "@/services/products.service";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -20,9 +21,11 @@ const ProductDetails = () => {
 
   return (
     <Layout>
-      ProductDetails of: {JSON.stringify(productId)}
-      <hr />
-      {product.title}
+      <Container>
+        ProductDetails of: {JSON.stringify(productId)}
+        <hr />
+        {product.title}
+      </Container>
     </Layout>
   );
 };

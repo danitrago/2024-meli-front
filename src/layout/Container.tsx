@@ -5,17 +5,7 @@ interface ContainerProps {
 }
 
 const Container = (props: ContainerProps) => {
-  return (
-    <div
-      style={{
-        maxWidth: "1200px",
-        border: "1px solid black",
-        margin: "0 auto"
-      }}
-    >
-      {props.children}
-    </div>
-  );
+  return <main className="container">{props.children}</main>;
 };
 
 export default Container;
