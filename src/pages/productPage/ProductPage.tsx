@@ -4,7 +4,7 @@ import { getProductDetails } from "@/services/products.service";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-const ProductDetails = () => {
+const ProductPage = () => {
   let { productId } = useParams();
   const [product, setProduct] = useState<any>({});
 
@@ -30,4 +30,4 @@ const ProductDetails = () => {
   );
 };
 
-export default ProductDetails;
+export default ProductPage;

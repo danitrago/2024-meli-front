@@ -1,20 +1,20 @@
-import ProductDetails from "@/pages/ProductDetails";
-import Results from "@/pages/Results";
-import Search from "@/pages/Search";
+import { ProductPage } from "@/pages/productPage";
+import { ResultsPage } from "@/pages/resultsPage";
+import { SearchPage } from "@/pages/searchPage";
 import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Search />
+    element: <SearchPage />
   },
   {
     path: "/items",
-    element: <Results />
+    element: <ResultsPage />
   },
   {
     path: "/items/:productId",
-    element: <ProductDetails />
+    element: <ProductPage />
   }
 ]);
 

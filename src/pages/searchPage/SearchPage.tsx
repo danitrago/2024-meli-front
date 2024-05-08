@@ -5,7 +5,7 @@ import { Slider } from "@/components/slider";
 import { Layout } from "@/layout";
 import { useEffect } from "react";
 
-const Search = () => {
+const SearchPage = () => {
   useEffect(() => {
     const searchBox = document.getElementsByName(
       "search"
@@ -24,4 +24,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default SearchPage;

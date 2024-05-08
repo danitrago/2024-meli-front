@@ -5,7 +5,7 @@ import { getSearchResults } from "@/services/search.services";
 import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 
-const Results = () => {
+const ResultsPage = () => {
   const [searchParams] = useSearchParams();
   const searchTerm = searchParams.get("search");
   const [products, setProducts] = useState([]);
@@ -38,4 +38,4 @@ const Results = () => {
   );
 };
 
-export default Results;
+export default ResultsPage;
