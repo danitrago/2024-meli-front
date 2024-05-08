@@ -1,4 +1,3 @@
-import SearchInput from "@/components/SearchInput";
 import { Layout } from "@/layout";
 import { getSearchResults } from "@/services/search.services";
 import { useEffect, useState } from "react";

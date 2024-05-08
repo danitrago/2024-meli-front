@@ -1,4 +1,4 @@
-import SearchInput from "@/components/SearchInput";
+import SearchInput from "@/features/search/containers/SearchInput";
 
 const Header = () => {
   return (
