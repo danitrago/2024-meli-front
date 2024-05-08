@@ -7,13 +7,8 @@ import { Button } from "@/components/button";
 
 const SearchForm = () => {
   const navigate = useNavigate();
-  const {
-    register,
-    handleSubmit,
-    formState: { errors }
-  } = useForm<FormFields>();
+  const { register, handleSubmit } = useForm<FormFields>();
   const onSubmit: SubmitHandler<FormFields> = (data) => {
-    console.log(data.search);
     navigate(`/items?search=${data.search.toString().trim()}`);
   };
 
