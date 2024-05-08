@@ -2,10 +2,8 @@
 
 body {
     font-family: variables.$font-family;
-}
-
-p {
-    color: green;
+    color: variables.$color-text;
+    background-color: variables.$body-bg-color;
 }
 
 button {
