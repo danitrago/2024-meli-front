@@ -17,7 +17,7 @@ const Results = () => {
 
   useEffect(() => {
     fetchProducts();
-  }, []);
+  }, [searchTerm]);
 
   return (
     <div>

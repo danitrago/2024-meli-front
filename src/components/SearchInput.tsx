@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SearchInput = () => {
   const navigate = useNavigate();
@@ -13,6 +13,7 @@ const SearchInput = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
+        <Link to="/">🏚️</Link>
         <input name="search" type="text" required />
       </form>
     </div>
