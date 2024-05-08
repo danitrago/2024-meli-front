@@ -1,4 +1,4 @@
-import SearchInput from "@/components/SearchInput";
+import { Layout } from "@/layout";
 import { getProductDetails } from "@/services/products.service";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -19,13 +19,11 @@ const ProductDetails = () => {
   }, []);
 
   return (
-    <div>
-      <SearchInput />
-      <hr />
+    <Layout>
       ProductDetails of: {JSON.stringify(productId)}
       <hr />
       {product.title}
-    </div>
+    </Layout>
   );
 };
 

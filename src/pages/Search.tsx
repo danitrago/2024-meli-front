@@ -1,12 +1,7 @@
-import SearchInput from '@/components/SearchInput'
-import React from 'react'
+import { Layout } from "@/layout";
 
 const Search = () => {
-  return (
-    <div>
-      <SearchInput />
-    </div>
-  )
-}
+  return <Layout />;
+};
 
-export default Search
+export default Search;
