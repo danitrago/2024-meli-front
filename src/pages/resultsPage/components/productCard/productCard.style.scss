@@ -1,0 +1,30 @@
+$component-name: 'productCard';
+
+.#{$component-name} {
+    display: flex;
+    border: 1px solid red;
+    margin-bottom: 1rem;
+    gap: 1.5rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &__img {
+        // flex: 1;
+        min-width: 8rem;
+        border: 1px solid red;
+        aspect-ratio: 1 / 1;
+        object-fit: contain;
+    }
+
+    &__desc {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__flags {
+        align-self: flex-end;
+        margin-left: auto;
+    }
+}

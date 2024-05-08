@@ -1,9 +1,12 @@
+import productAdapter from "@/adapters/product.adapter";
 import { BreadCrumb } from "@/components/breadcrumb";
 import { Surface } from "@/components/surface";
 import useDataReducer from "@/hooks/useDataReducer";
 import { getSearchResults } from "@/services/search.services";
+import { Product } from "@/types/product.types";
 import { useEffect } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
+import { ProductCard } from "../components/productCard";
 
 const SearchResults = () => {
   const [searchParams] = useSearchParams();
@@ -13,8 +16,15 @@ const SearchResults = () => {
   const { categories = [], items = [] } = data.data || {};
 
   const fetchData = async (q: string) => {
-    const data = await getSearchResults(q);
-    dispatchData({ type: "SUCCESS", payload: data.data });
+    try {
+      const response = await getSearchResults(q);
+      const items = response.data?.items.map((item: any) =>
+        productAdapter(item)
+      );
+      dispatchData({ type: "SUCCESS", payload: { ...response.data, items } });
+    } catch (error) {
+      alert("Ups, hubo un error cargando los resultados de búsqueda");
+    }
   };
 
   useEffect(() => {
@@ -29,11 +39,8 @@ const SearchResults = () => {
     <section>
       <BreadCrumb items={categories} />
       <Surface>
-        <p>Officia do ex dolore proident velit duis. Reprehenderit ullamco ullamco duis non ex non. Commodo consequat proident ut non magna. Labore quis adipisicing esse ad ut ex id minim fugiat.</p>
-        {items.map((product: any) => (
-          <li key={product.id}>
-            <Link to={`/items/${product.id}`}>{product.title}</Link>
-          </li>
+        {items.slice(0, 4).map((product: Product) => (
+          <ProductCard key={product.id} {...product} />
         ))}
       </Surface>
     </section>
