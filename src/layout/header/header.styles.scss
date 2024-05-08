@@ -7,6 +7,9 @@ $component-name: header;
     margin-bottom: 1rem;
     padding-top: .7rem;
     padding-bottom: .7rem;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 
     &__container {
         display: flex;
