@@ -8,7 +8,7 @@ const SearchInput = () => {
     const formData = new FormData(event.target as HTMLFormElement);
     const data = Object.fromEntries(formData.entries());
     console.log(data.search);
-    navigate(`/items?search=${data.search}`);
+    navigate(`/items?search=${data.search.toString().trim()}`);
   };
   return (
     <div>
