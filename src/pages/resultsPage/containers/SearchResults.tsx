@@ -1,4 +1,5 @@
 import { BreadCrumb } from "@/components/breadcrumb";
+import { Surface } from "@/components/surface";
 import useDataReducer from "@/hooks/useDataReducer";
 import { getSearchResults } from "@/services/search.services";
 import { useEffect } from "react";
@@ -27,13 +28,14 @@ const SearchResults = () => {
   return (
     <section>
       <BreadCrumb items={categories} />
-      <div className="container" style={{ backgroundColor: "white" }}>
+      <Surface>
+        <p>Officia do ex dolore proident velit duis. Reprehenderit ullamco ullamco duis non ex non. Commodo consequat proident ut non magna. Labore quis adipisicing esse ad ut ex id minim fugiat.</p>
         {items.map((product: any) => (
           <li key={product.id}>
             <Link to={`/items/${product.id}`}>{product.title}</Link>
           </li>
         ))}
-      </div>
+      </Surface>
     </section>
   );
 };

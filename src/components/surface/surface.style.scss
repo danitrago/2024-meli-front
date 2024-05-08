@@ -1,0 +1,10 @@
+@use '../../styles/settings/variables.scss';
+
+$component-name: 'surface';
+
+.#{$component-name} {
+    background-color: variables.$surface-bg-color;
+    color: variables.$surface-text-color;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
