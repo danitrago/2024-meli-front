@@ -3,73 +3,79 @@
 
 $component-name: 'productSheet';
 
-.#{$component-name} {
+@mixin d-flex-col {
     display: flex;
-    border-bottom: 1px solid variables.$body-bg-color;
-    padding: .5rem;
-    margin-bottom: 1rem;
-    gap: 1.5rem;
-    text-decoration: none;
-    color: inherit;
+    flex-direction: column;
+}
 
-    &:last-child {
-        margin-bottom: 0;
-        border: none;
+.#{$component-name} {
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    &__buy {
+        border: 1px solid variables.$body-bg-color;
+        padding: 1rem;
+        border-radius: .5rem;
+        @include d-flex-col;
+        gap: .5rem;
+
+        .buyButton {
+            margin-top: 1rem
+        }
+
+    }
+
+    &__desc {
+        @include d-flex-col;
+        gap: 1.5rem;
+
+        @media (max-width: 768px) {
+            order: 1;
+        }
+
+        p {
+            @include mixins.line-truncate(7);
+        }
+    }
+
+    &__gallery {
+        display: grid;
+        grid-template-columns: 2fr 9fr;
+        gap: 1rem;
+    }
+
+    &__thumbImg {
+        width: 100%;
+        border: 1px solid variables.$body-bg-color;
+        border-radius: .5rem;
     }
 
     &__price {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
         margin-top: 1rem;
 
         @media (max-width: 768px) {
-            font-size: 1.2rem;
+            font-size: 2rem;
             margin-top: .5rem;
         }
     }
 
-    &__title {
-        font-size: 1.2rem;
-        @include mixins.line-truncate(2);
-
-        @media (max-width: 768px) {
-            font-size: 1rem;
-        }
-    }
-
-    &__freeShipping {
-        font-size: .8rem;
-        color: variables.$success-text-color;
-    }
-
     &__img {
-        width: 11rem;
-        min-width: 11rem;
+        width: 100%;
         aspect-ratio: 1 / 1;
         object-fit: contain;
         border-radius: .5rem;
         border: 1px solid variables.$body-bg-color;
-        
-        @media (max-width: 768px) {
-            width: 6rem;
-            min-width: 6rem;
-        }
-    }
-
-    &__desc {
-        display: flex;
-        flex-direction: column;
-        gap: .5rem;
     }
 
     &__flags {
-        align-self: flex-end;
-        margin-left: auto;
-        margin-bottom: 1rem;
+        margin-bottom: .5rem;
         color: variables.$color-text-light;
-
-        @media (max-width: 768px) {
-            display: none;
-
-        }
     }
 }
