@@ -1,30 +1,16 @@
-# React + TypeScript + Vite
+# Prueba Técnica Mercado Libre - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+En este repositorio encontrarás el código fuente creado para la prueba técnica de Mercado Libre. Además de TypeScript, he utilizado React + Vite como lo recomendaban los enunciados de la prueba.
 
-Currently, two official plugins are available:
+Esta aplicación requiere de un backend corriendo en local para funcionar:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Ir al repositorio del backend](https://github.com/danitrago/2024-meli-back)
 
-## Expanding the ESLint configuration
+## Instalación y Entorno de Desarrollo
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Si deseas instalar y correr esta aplicación en tu local, lanza los siguientes comandos:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+pnpm install
+pnpm run dev
+```
