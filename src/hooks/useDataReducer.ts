@@ -15,18 +15,17 @@ const reducer = (state: DataState, action: DataAction) => {
   switch (action.type) {
     case "LOADING":
       return {
-        ...state,
+        ...initialState,
         loading: true
       };
     case "SUCCESS":
       return {
-        ...state,
+        ...initialState,
         data: action.payload,
-        loading: false
       };
     case "ERROR":
       return {
-        ...state,
+        ...initialState,
         error: true
       };
     default:
