@@ -2,9 +2,13 @@
 
 body {
     font-family: variables.$font-family;
-    color: variables.$color-text;
-    background-color: variables.$body-bg-color;
+    color: variables.$text;
+    background-color: variables.$light-gray;
     position: relative;
+}
+
+input {
+    color: variables.$text;
 }
 
 button {

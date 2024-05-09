@@ -7,7 +7,7 @@ $component-name: 'breadCrumb';
     font-weight: bold;
     font-size: .8rem;
     padding: 1rem 0;
-    color: variables.$color-text-light;
+    color: variables.$muted;
 
     &__link {
         text-decoration: none;

@@ -1,13 +1,13 @@
 $font-family: 'Roboto', sans-serif;
+
 // palette
 $primary: #fbe602;
 $secondary: #3583f2;
-$light-color: white;
-// background colors
-$body-bg-color: #eeeeee;
-$surface-bg-color: white;
-// text colors
-$color-text: black;
-$color-text-light: #737373;
-$surface-text-color: #2d2d2d;
-$success-text-color: green;
+$light: white;
+$light-gray: #eeeeee;
+$text: #232323;
+$muted: #8d8d8d;
+$success: green;
+
+// contrast
+$secondary-contrast: white;

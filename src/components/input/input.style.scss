@@ -3,8 +3,7 @@
 $component-name: 'input';
 
 .#{$component-name} {
-    background-color: variables.$light-color;
-    color: variables.$color-text;
+    background-color: variables.$light;
     border: none;
     padding: .8rem;
     width: 100%;

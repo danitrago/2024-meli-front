@@ -3,8 +3,7 @@
 $component-name: 'surface';
 
 .#{$component-name} {
-    background-color: variables.$surface-bg-color;
-    color: variables.$surface-text-color;
+    background-color: variables.$light;
     padding: 1.5rem;
     border-radius: .5rem;
     margin-bottom: 2rem;
