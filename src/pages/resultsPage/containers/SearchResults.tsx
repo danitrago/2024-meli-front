@@ -25,7 +25,7 @@ const SearchResults = () => {
       );
       dispatchData({ type: "SUCCESS", payload: { ...response.data, items } });
     } catch (error) {
-      alert("Ups, hubo un error cargando los resultados de búsqueda");
+      dispatchData({ type: "ERROR" });
     }
   };
 
@@ -36,6 +36,9 @@ const SearchResults = () => {
   }, [searchTerm]);
 
   if (data.loading) return <Spinner />;
+
+  if (data.error)
+    return <Empty text={`Ups, hubo un problema buscando: "${searchTerm}"`} />;
 
   if (!items.length)
     return <Empty text={`Ups, no hubo resultados para: "${searchTerm}"`} />;
