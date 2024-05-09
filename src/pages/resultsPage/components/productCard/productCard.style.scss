@@ -1,30 +1,63 @@
+@use '../../../../styles/settings/variables.scss';
+@use '../../../../styles/tools/mixins.scss';
+
 $component-name: 'productCard';
 
 .#{$component-name} {
     display: flex;
-    border: 1px solid red;
+    border-bottom: 1px solid variables.$body-bg-color;
+    padding: .5rem;
     margin-bottom: 1rem;
     gap: 1.5rem;
 
     &:last-child {
         margin-bottom: 0;
+        border: none;
+    }
+
+    &__price {
+        font-size: 1.5rem;
+    }
+
+    &__title {
+        font-size: 1.2rem;
+        @include mixins.line-truncate(2);
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+
+    &__freeShipping {
+        color: green;
     }
 
     &__img {
-        // flex: 1;
-        min-width: 8rem;
-        border: 1px solid red;
+        width: 11rem;
         aspect-ratio: 1 / 1;
         object-fit: contain;
+        border-radius: .5rem;
+
+        @media (max-width: 768px) {
+            width: 6rem;
+        }
     }
 
     &__desc {
         display: flex;
         flex-direction: column;
+        gap: .5rem;
     }
 
     &__flags {
         align-self: flex-end;
         margin-left: auto;
+        margin-bottom: 1rem;
+
+        @media (max-width: 768px) {
+            display: none;
+
+        }
     }
 }
