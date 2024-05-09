@@ -1,0 +1,12 @@
+@use '../../styles/settings/variables.scss';
+
+$component-name: 'buyButton';
+
+.#{$component-name} {
+    background-color: variables.$secondary;
+    color: variables.$light-color;
+    border: none;
+    border-radius: .5rem;
+    padding: .8rem;
+    font-size: 1.2rem;
+}
