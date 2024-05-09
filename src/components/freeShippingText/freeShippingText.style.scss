@@ -1,0 +1,8 @@
+@use '../../styles/settings/variables.scss';
+
+$component-name: 'freeShippingText';
+
+.#{$component-name} {
+    font-size: .8rem;
+    color: variables.$success-text-color;
+}

@@ -1,6 +1,7 @@
 import { Product } from "@/types/product.types";
 import { Link } from "react-router-dom";
 import "./productCard.style.scss";
+import { FreeShipingText } from "@/components/freeShippingText";
 
 const ProductCard = (props: Product) => {
   const { id, title, img, prettyPrice, condition, freeShipping } = props;
@@ -10,7 +11,7 @@ const ProductCard = (props: Product) => {
       <div className="productCard__desc">
         <span className="productCard__price">{prettyPrice}</span>
         {freeShipping && (
-          <span className="productCard__freeShipping">Envío gratis</span>
+          <FreeShipingText />
         )}
         <h3 className="productCard__title">{title}</h3>
       </div>

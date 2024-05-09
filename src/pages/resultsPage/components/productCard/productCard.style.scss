@@ -36,11 +36,6 @@ $component-name: 'productCard';
         }
     }
 
-    &__freeShipping {
-        font-size: .8rem;
-        color: variables.$success-text-color;
-    }
-
     &__img {
         width: 11rem;
         min-width: 11rem;
