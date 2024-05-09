@@ -1,5 +1,7 @@
 import productAdapter from "@/adapters/product.adapter";
 import { BreadCrumb } from "@/components/breadcrumb";
+import { Empty } from "@/components/empty";
+import { Spinner } from "@/components/spinner";
 import { Surface } from "@/components/surface";
 import useDataReducer from "@/hooks/useDataReducer";
 import { getSearchResults } from "@/services/search.services";
@@ -33,7 +35,9 @@ const SearchResults = () => {
     fetchData(searchTerm);
   }, [searchTerm]);
 
-  if (data.loading) return <div>Loading...</div>;
+  if (data.loading) return <Spinner />;
+
+  if (!items.length) return <Empty />;
 
   return (
     <section>
