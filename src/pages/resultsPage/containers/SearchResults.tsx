@@ -37,7 +37,8 @@ const SearchResults = () => {
 
   if (data.loading) return <Spinner />;
 
-  if (!items.length) return <Empty />;
+  if (!items.length)
+    return <Empty text={`Ups, no hubo resultados para: "${searchTerm}"`} />;
 
   return (
     <section>
