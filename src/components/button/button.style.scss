@@ -1,7 +1,9 @@
+@use '../../styles/settings/variables.scss';
+
 $component-name: 'button';
 
 .#{$component-name} {
-    background-color: #f5f3ec;
+    background-color: variables.$light-gray;
     border: none;
     padding: .8rem;
 }
