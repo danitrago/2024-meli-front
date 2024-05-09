@@ -1,4 +1,5 @@
 import productAdapter from "@/adapters/product.adapter";
+import { BreadCrumb } from "@/components/breadcrumb";
 import { Empty } from "@/components/empty";
 import { Spinner } from "@/components/spinner";
 import { Surface } from "@/components/surface";
@@ -40,7 +41,7 @@ const ProductDetails = () => {
 
   return (
     <section>
-      {/* <BreadCrumb items={categories} /> */}
+      <BreadCrumb items={[item.title]} />
       <Surface>
         <ProductSheet {...item} />
       </Surface>
