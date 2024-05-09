@@ -1,0 +1,31 @@
+@use '../../styles/settings/variables.scss';
+
+$component-name: 'buyCard';
+
+.#{$component-name} {
+    border: 1px solid variables.$body-bg-color;
+    padding: 1rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    .buyButton {
+        margin-top: 1rem
+    }
+
+    &__flags {
+        margin-bottom: .5rem;
+        color: variables.$color-text-light;
+    }
+
+    &__price {
+        font-size: 2.5rem;
+        margin-top: 1rem;
+
+        @media (max-width: 768px) {
+            font-size: 2rem;
+            margin-top: .5rem;
+        }
+    }
+}

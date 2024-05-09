@@ -1,7 +1,6 @@
+import { BuyCard } from "@/components/buyCard";
 import { Product } from "@/types/product.types";
 import "./productSheet.style.scss";
-import { FreeShipingText } from "@/components/freeShippingText";
-import { BuyButton } from "@/components/buyButton";
 
 const ProductSheet = (props: Product) => {
   const {
@@ -24,18 +23,13 @@ const ProductSheet = (props: Product) => {
         <h2>Descripción del producto</h2>
         <p>{description}</p>
       </div>
-      <div className="productSheet__buy">
-        <div className="productSheet__flags">
-          <span>
-            {condition}
-            {soldQuantity && ` - ${soldQuantity} vendidos`}
-          </span>
-        </div>
-        <h1 className="productSheet__title">{title}</h1>
-        <span className="productSheet__price">{prettyPrice}</span>
-        {freeShipping && <FreeShipingText />}
-        <BuyButton onClick={() => alert("Comprar " + id)}>Comprar</BuyButton>
-      </div>
+      <BuyCard
+        id={id}
+        title={title}
+        tags={`${condition}${soldQuantity && ` - ${soldQuantity} vendidos`}`}
+        price={prettyPrice}
+        isFreeShipping={freeShipping}
+      />
     </article>
   );
 };

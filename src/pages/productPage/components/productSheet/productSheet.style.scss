@@ -18,19 +18,6 @@ $component-name: 'productSheet';
         gap: 1rem;
     }
 
-    &__buy {
-        border: 1px solid variables.$body-bg-color;
-        padding: 1rem;
-        border-radius: .5rem;
-        @include d-flex-col;
-        gap: .5rem;
-
-        .buyButton {
-            margin-top: 1rem
-        }
-
-    }
-
     &__desc {
         @include d-flex-col;
         gap: 1.5rem;
@@ -56,26 +43,11 @@ $component-name: 'productSheet';
         border-radius: .5rem;
     }
 
-    &__price {
-        font-size: 2.5rem;
-        margin-top: 1rem;
-
-        @media (max-width: 768px) {
-            font-size: 2rem;
-            margin-top: .5rem;
-        }
-    }
-
     &__img {
         width: 100%;
         aspect-ratio: 1 / 1;
         object-fit: contain;
         border-radius: .5rem;
         border: 1px solid variables.$body-bg-color;
-    }
-
-    &__flags {
-        margin-bottom: .5rem;
-        color: variables.$color-text-light;
     }
 }
