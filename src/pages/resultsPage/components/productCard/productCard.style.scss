@@ -9,6 +9,8 @@ $component-name: 'productCard';
     padding: .5rem;
     margin-bottom: 1rem;
     gap: 1.5rem;
+    text-decoration: none;
+    color: inherit;
 
     &:last-child {
         margin-bottom: 0;
@@ -17,9 +19,11 @@ $component-name: 'productCard';
 
     &__price {
         font-size: 1.5rem;
+        margin-top: 1rem;
 
         @media (max-width: 768px) {
             font-size: 1.2rem;
+            margin-top: .5rem;
         }
     }
 
@@ -30,11 +34,6 @@ $component-name: 'productCard';
         @media (max-width: 768px) {
             font-size: 1rem;
         }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
     }
 
     &__freeShipping {
@@ -44,12 +43,15 @@ $component-name: 'productCard';
 
     &__img {
         width: 11rem;
+        min-width: 11rem;
         aspect-ratio: 1 / 1;
         object-fit: contain;
         border-radius: .5rem;
-
+        border: 1px solid variables.$body-bg-color;
+        
         @media (max-width: 768px) {
             width: 6rem;
+            min-width: 6rem;
         }
     }
 
@@ -63,6 +65,7 @@ $component-name: 'productCard';
         align-self: flex-end;
         margin-left: auto;
         margin-bottom: 1rem;
+        color: variables.$color-text-light;
 
         @media (max-width: 768px) {
             display: none;

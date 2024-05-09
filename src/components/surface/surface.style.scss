@@ -8,4 +8,8 @@ $component-name: 'surface';
     padding: 1.5rem;
     border-radius: .5rem;
     margin-bottom: 2rem;
+
+    @media (max-width: 768px) {
+        padding: 1rem;
+    }
 }
