@@ -1,5 +1,5 @@
 import Logo from "@/components/Logo";
-import "./header.styles.scss";
+import "./header.style.scss";
 import { SearchForm } from "@/containers/search-form";
 
 const Header = () => {
