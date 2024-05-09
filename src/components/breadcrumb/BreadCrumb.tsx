@@ -9,7 +9,7 @@ const BreadCrumb = ({ items }: BreadCrumbProps) => {
   if (!items.length) return;
 
   const elements = items.map((category: string, index: number) => (
-    <li key={category}>
+    <li key={index}>
       <Link className="breadCrumb__link" to={`/items?search=${category}`}>{category}</Link>
       {index < items.length - 1 && (
         <span className="breadCrumb__separator">{">"}</span>
