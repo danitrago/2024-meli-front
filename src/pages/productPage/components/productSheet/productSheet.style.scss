@@ -1,0 +1,75 @@
+@use '../../../../styles/settings/variables.scss';
+@use '../../../../styles/tools/mixins.scss';
+
+$component-name: 'productSheet';
+
+.#{$component-name} {
+    display: flex;
+    border-bottom: 1px solid variables.$body-bg-color;
+    padding: .5rem;
+    margin-bottom: 1rem;
+    gap: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+
+    &:last-child {
+        margin-bottom: 0;
+        border: none;
+    }
+
+    &__price {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+
+        @media (max-width: 768px) {
+            font-size: 1.2rem;
+            margin-top: .5rem;
+        }
+    }
+
+    &__title {
+        font-size: 1.2rem;
+        @include mixins.line-truncate(2);
+
+        @media (max-width: 768px) {
+            font-size: 1rem;
+        }
+    }
+
+    &__freeShipping {
+        font-size: .8rem;
+        color: variables.$success-text-color;
+    }
+
+    &__img {
+        width: 11rem;
+        min-width: 11rem;
+        aspect-ratio: 1 / 1;
+        object-fit: contain;
+        border-radius: .5rem;
+        border: 1px solid variables.$body-bg-color;
+        
+        @media (max-width: 768px) {
+            width: 6rem;
+            min-width: 6rem;
+        }
+    }
+
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    &__flags {
+        align-self: flex-end;
+        margin-left: auto;
+        margin-bottom: 1rem;
+        color: variables.$color-text-light;
+
+        @media (max-width: 768px) {
+            display: none;
+
+        }
+    }
+}
